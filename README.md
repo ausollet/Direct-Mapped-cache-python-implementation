@@ -34,10 +34,10 @@ tells us whether each instruction is a miss or hit and what and where the data i
 
 ## Plots:
 
-### hit ratio vs number of instructions plot
+### hit ratio varying with number of instructions plot
 ![Alt text](hit_ratio_ni.png?raw=true "hit ratio varying with number of instructions")
 
-### hit ratio vs number of words per line plot
+### hit ratio varying with number of words per line plot
 ![Alt text](hit_ratio_wp.png?raw=true "hit ratio varying with change in number of words per line")
 
 ## Done by:
