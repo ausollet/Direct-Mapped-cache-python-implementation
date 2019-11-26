@@ -1,5 +1,5 @@
 # Direct-Mapped-cache-python-implementation 
-###<sub>by: 1.C P Vikram Adithya 2.Parithimalan A 3.Sriram G</sub>
+###                       <sub>by: 1.C P Vikram Adithya 2.Parithimalan A 3.Sriram G</sub>
 
 ## About project:
 Implementaion of direct mapped cache with 256 lines and varying words per line (1->16) using python, where each word is of 32 bits size.
