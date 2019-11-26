@@ -1,3 +1,3 @@
 # Direct-Mapped-cache-python-implementation
 
-![alt text](https://https://raw.githubusercontent.com/ausollet/Direct-Mapped-cache-python-implementation/blob/master/hit_ratio_ni.png)
+![hit ratio varying with no of instructions](https://https://github.com/ausollet/Direct-Mapped-cache-python-implementation/blob/master/hit_ratio_ni.png)
