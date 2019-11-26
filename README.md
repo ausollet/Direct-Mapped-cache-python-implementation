@@ -8,7 +8,7 @@ To observe and study the change in hit ratio for differing conditions such as nu
 
 ## Working:
 In mem_gen.py, we are implementing a main memory file with 1000000 entries (since creating a file with 2<sup>36</sup> entries will become too big; 11.64 GB to be exact).
-Hence, we whenever we want to access memory beyond 10^6, we are doing instr_no%10<sup>6</sup>
+Hence, we whenever we want to access memory beyond 10<sup>6</sup>, we are doing instr_no%10<sup>6</sup>
 
 ## hit ratio vs number of instructions plot
 ![Alt text](hit_ratio_ni.png?raw=true "hit ratio varying with number of instructions")
