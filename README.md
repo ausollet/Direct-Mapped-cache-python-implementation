@@ -1,4 +1,5 @@
-# Direct-Mapped-cache-python-implementation 
+# Direct-Mapped-cache-python-implementation
+
 ## About project:
 Implementaion of direct mapped cache with 256 lines and varying words per line (1->16) using python, where each word is of 32 bits size.
 
@@ -26,4 +27,9 @@ tells us whether each instruction is a miss or hit and what and where the data i
 
 ## hit ratio vs number of words per line plot
 ![Alt text](hit_ratio_wp.png?raw=true "hit ratio varying with change in number of words per line")
+
+## Done by:
+1.C P Vikram Adithya
+2.Parithimalan A
+3.Sriram G
 
