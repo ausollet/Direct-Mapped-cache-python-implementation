@@ -8,7 +8,7 @@ To observe and study the change in hit ratio for differing conditions such as nu
 
 ## mem_gen.py:
 In mem_gen.py, we are implementing a main memory file with 1000000 entries (since creating a file with 2<sup>36</sup> entries will become too big; 11.64 GB to be exact).
-Hence, we whenever we want to access memory beyond 10<sup>6</sup>, we are doing [integer value of memory address]%10<sup>6</sup>
+Hence, we whenever we want to access memory beyond 10<sup>6</sup>, we are doing [integer value of memory address]%10<sup>6</sup>.
 
 ## memory.dat:
 Contains 10<sup>6</sup> random entries between 0 and 255.
@@ -17,7 +17,7 @@ Contains 10<sup>6</sup> random entries between 0 and 255.
 mem list contains entries of main memory
 cache list is used to find whether the memory instruction is a hit or a miss
 cache_data list contains data stored in cache
-after reading all instructions from input trace files gives an output file output.txt
+after reading all instructions from input trace files gives an output file output.txt.
 
 ## output.txt:
 tells us whether each instruction is a miss or hit and what and where the data is read/stored, i.e. in cache/memory.
