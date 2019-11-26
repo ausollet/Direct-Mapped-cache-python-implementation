@@ -22,14 +22,25 @@ after reading all instructions from input trace files gives an output file outpu
 ## output.txt:
 tells us whether each instruction is a miss or hit and what and where the data is read/stored, i.e. in cache/memory.
 
-## hit ratio vs number of instructions plot
+## Pre-requisites for running the code:
+1. Keep all files in same directory
+2. Run the code using python3
+3. Run mem_gen.py before running cache.py
+
+## Getting the output:
+1. Run cache.py
+2. One shall get two .png files, namely hit_ratio_ni and hit_ratio_wp, saved in the directory
+3. output.txt file, containing details about cache hit/miss is generated in the working directory
+
+## Plots:
+
+### hit ratio vs number of instructions plot
 ![Alt text](hit_ratio_ni.png?raw=true "hit ratio varying with number of instructions")
 
-## hit ratio vs number of words per line plot
+### hit ratio vs number of words per line plot
 ![Alt text](hit_ratio_wp.png?raw=true "hit ratio varying with change in number of words per line")
 
 ## Done by:
-### 1.C P Vikram Adithya
-### 2.Parithimalan A
-### 3.Sriram G
-
+### 1. C P Vikram Adithya
+### 2. Parithimalan A
+### 3. Sriram G
