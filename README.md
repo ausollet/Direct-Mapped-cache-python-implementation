@@ -29,7 +29,7 @@ tells us whether each instruction is a miss or hit and what and where the data i
 ![Alt text](hit_ratio_wp.png?raw=true "hit ratio varying with change in number of words per line")
 
 ## Done by:
-1.C P Vikram Adithya
-2.Parithimalan A
-3.Sriram G
+### 1.C P Vikram Adithya
+### 2.Parithimalan A
+### 3.Sriram G
 
