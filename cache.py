@@ -86,7 +86,10 @@ if __name__ == "__main__":
         ind=getindex(hexa, lines, w)
         tag=gettag(hexa, lines, w)
         address = int('0x'+hexa, 16)
-        mem[address%10**6] = value
+        if to_do=='s':
+          mem[address%10**6] = value
+          cache_data[ind][block_offset][byte_offset] = value
+          
         hexa = '0x'+hexa[0:30-int(math.log2(w))]
         for k in range(int(math.log2(w))+2):
           hexa+='0'
@@ -95,15 +98,15 @@ if __name__ == "__main__":
           if tags[ind]==tag:
             hits=hits+1
             if to_do=='l':
-              o.write('cache hit! required data read from cache: '+ str(cache_data[ind][block_offset][byte_offset])) #data read from cache
+              o.write('cache hit! required data read from cache: '+str(tag)+' '+str(ind)+' '+str(block_offset)+' '+str(byte_offset)+' '+str(cache_data[ind][block_offset][byte_offset])) #data read from cache
             elif to_do=='s':
-              o.write('cache hit! given data already in cache: '+ str(cache_data[ind][block_offset][byte_offset])) #data in cache and memory
+              o.write('cache hit! given data already in cache: '+str(tag)+' '+str(ind)+' '+str(block_offset)+' '+str(byte_offset)+' '+str(cache_data[ind][block_offset][byte_offset])) #data in cache and memory
           else:
             tags[ind]=tag
             if to_do=='l':            
-              o.write('cache miss! required data read from memory: '+str(mem[address%10**6])) #data read from memory
+              o.write('cache miss! required data read from memory: '+str(tag)+' '+str(ind)+' '+str(block_offset)+' '+str(byte_offset)+' '+str(mem[address%10**6])) #data read from memory
             elif to_do=='s':
-              o.write('cache miss! given data has now been stored in cache and memory: '+str(mem[address%10**6])) #data has been stored in cache and memory
+              o.write('cache miss! given data has now been stored in cache and memory: '+str(tag)+' '+str(ind)+' '+str(block_offset)+' '+str(byte_offset)+' '+str(mem[address%10**6])) #data has been stored in cache and memory
             for i in range(w):
               for j in range(4):
                 cache_data[ind][i][j] = mem[hexa%10**6]
@@ -112,9 +115,9 @@ if __name__ == "__main__":
           cache[ind]=True
           tags[ind]=tag
           if to_do=='l':          
-            o.write('cache miss! required data read from memory: '+str(mem[address%10**6])) #data read from memory
+            o.write('cache miss! required data read from memory: '+str(tag)+' '+str(ind)+' '+str(block_offset)+' '+str(byte_offset)+' '+str(mem[address%10**6])) #data read from memory
           elif to_do=='s':
-            o.write('cache miss! given data has now been stored in cache and memory: '+str(mem[address%10**6])) #data has been stored in cache and memory
+            o.write('cache miss! given data has now been stored in cache and memory: '+str(tag)+' '+str(ind)+' '+str(block_offset)+' '+str(byte_offset)+' '+str(mem[address%10**6])) #data has been stored in cache and memory
           for i in range(w):
             for j in range(4):
               cache_data[ind][i][j] = mem[hexa%10**6]
@@ -137,7 +140,7 @@ if __name__ == "__main__":
     plt.plot(range(len(hits_each[i])),hits_each[i],label=i)
   plt.xlim(0,8e5)
   plt.legend(loc='lower right')
-  plt.title('Hit rate vs number of instructions')
+  plt.title('Hit rate vs number of instructions [16 words per line cache]')
   plt.xlabel('Number of Instructions')
   plt.ylabel('Hit Rate')
   plt.savefig('hit_ratio_ni.png')
