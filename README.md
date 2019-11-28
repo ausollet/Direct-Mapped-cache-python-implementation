@@ -45,7 +45,7 @@ tells us whether each instruction is a miss or hit and what and where the data i
 ### Possible reason:
 we believe, that this discrepancy is arising due to us using %10<sup>6</sup> of address, thus changing the tag and maybe the index of where the data is going to be stored at. The block and byte offset remain unaffected by this change.
 This doesn't affect cache hit/miss ratio as we have implemented that seperately, without the need of main memory.
-The only reason as to why we didn't use a main memory of 2<sup>32</sup> entries, is because it's size is too big (**11.69 GB!!**)
+The only reason as to why we didn't use a main memory of 2<sup>32</sup> entries, is because it's size is too big (**11.64 GB!!**)
 We believe, that if a proper main memory with 2<sup>36</sup> entires is used (don't forget to remove %10<sup>6</sup> in cache.py), then there will not exist any discrepancy between data used and data stored.
 
 ## Done by:
