@@ -44,7 +44,7 @@ Sample screenshot of how to output file would look, can be seen below
 ![Alt text](hit_ratio_wp.png?raw=true "hit ratio varying with change in number of words per line")
 
 ## Errors and their possible reasons:
-1. discrepancy in data of cache and memory
+1. discrepancy of data stored in cache and memory
 ### Possible reason:
 we believe, that this discrepancy is arising due to us using %10<sup>6</sup> of address, thus changing the tag and maybe the index of where the data is going to be stored at. The block and byte offset remain unaffected by this change.
 This doesn't affect cache hit/miss ratio as we have implemented that seperately, without the need of main memory.
