@@ -40,6 +40,14 @@ tells us whether each instruction is a miss or hit and what and where the data i
 ### hit ratio varying with number of words per line plot
 ![Alt text](hit_ratio_wp.png?raw=true "hit ratio varying with change in number of words per line")
 
+## Errors and their possible reasons:
+1. discrepancy in data of cache vs memory
+### Possible reason:
+we believe, that this discrepancy is arising due to us using %10<sup>6</sup> of address, thus changing the tag value, while storing the data. Only the tag is affected, while the index, block and byte offset remain same.
+This doesn't affect cache hit/miss ratio as we have implemented that seperately, without the need of main memory.
+The only reason as to why we didn't use a main memory of 2<sup>32</sup> entries, is because it's size is too big (**11.69 GB!!**)
+We believe, that if a proper main memory with 2<sup>36</sup> entires is used (don't forget to remove %10<sup>6</sup> in cache.py), then there will not exist any discrepancy between data used and data stored.
+
 ## Done by:
 ### 1. C P Vikram Adithya
 ### 2. Parithimalan A
