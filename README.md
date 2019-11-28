@@ -34,7 +34,7 @@ tells us whether each instruction is a miss or hit and what and where the data i
 
 ## Plots:
 
-### hit ratio varying with number of instructions plot
+### hit ratio varying with number of instructions plot (words per line of cache fixed as 16)
 ![Alt text](hit_ratio_ni.png?raw=true "hit ratio varying with number of instructions")
 
 ### hit ratio varying with number of words per line plot
