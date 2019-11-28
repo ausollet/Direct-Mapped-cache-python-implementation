@@ -21,6 +21,7 @@ after reading all instructions from input trace files gives an output file outpu
 
 ## output.txt:
 tells us whether each instruction is a miss or hit and what and where the data is read/stored, i.e. in cache/memory.
+![Alt text](Screenshot of output file.png?raw=true "sample output screenshot")
 
 ## Pre-requisites for running the code:
 1. Keep all files in same directory
