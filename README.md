@@ -53,5 +53,5 @@ We believe, that if a proper main memory with 2<sup>36</sup> entires is used (do
 
 ## Done by:
 ### 1. C P Vikram Adithya
-### 2. Parithimalan A
-### 3. Sriram G
+### 2. Sriram G
+### 3. Parithimalan A
